@@ -29,17 +29,14 @@
 \});\
 \
 6.  db.products.find(\{\
-    price:\
-        \{\
-        $gte: 10.00\
-        \}\
+    $and:[\{category:\'94tools:\},\
+	\{$gt:\{price: 10.00\}\}\
     \});\
 6B. db.products.find(\{\
-        $and:[ price:\
-        \{\
-        $gte: 10.00\
-        \},\
-            \{category:"Stanley Black and Decker"\}\
+        $and:[ \
+	\{category: \'93tools\'94\},\
+	\{$gt:\{price: 10.00\},\
+         \{company:\'94Stanley Black and Decker"\}\
         ]\
     \});\
 7. db.products.remove(\{\
